@@ -60,6 +60,10 @@ li {
   z-index: 1000;
 }
 
+.sidebar hr {
+  margin: 1rem 0rem;
+}
+
 .sidebar.show {
   display: block;
   transform: translate(-100%, 0);
