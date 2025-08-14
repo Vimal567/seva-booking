@@ -1,9 +1,11 @@
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
 import { SnackbarProvider } from "notistack";
+import { Provider } from 'react-redux';
+import { store } from './store';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <SnackbarProvider
     maxSnack={1}
@@ -13,6 +15,8 @@ root.render(
     }}
     autoHideDuration={1000}
   >
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </SnackbarProvider>
 );

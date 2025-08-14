@@ -14,6 +14,7 @@
 h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-left: 1rem;
+  cursor: default;
 }
 
 .navbar-container ul,
@@ -65,4 +66,5 @@ li {
   opacity: 1;
   transform: translate(-100%, 0);
   pointer-events: auto;
+  cursor: default;
 }

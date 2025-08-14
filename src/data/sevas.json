@@ -1,0 +1,343 @@
+[
+    {
+        "id": 1,
+        "code": "SEVA001",
+        "title": "Annadanam - Feeding the Poor",
+        "tags": [
+            "Charity",
+            "Food",
+            "Temple"
+        ],
+        "description": "Serve freshly prepared meals to those in need at the temple premises.",
+        "marketPrice": 500,
+        "discountedPrice": 400,
+        "start": "2025-08-20",
+        "end": "2025-08-30",
+        "amountRaised": 15000,
+        "targetAmount": 30000,
+        "media": "https://picsum.photos/seed/seva1/400/300"
+    },
+    {
+        "id": 2,
+        "code": "SEVA002",
+        "title": "Temple Flower Decoration",
+        "tags": [
+            "Decoration",
+            "Temple"
+        ],
+        "description": "Offer beautiful flowers for temple deity decoration.",
+        "marketPrice": 300,
+        "discountedPrice": 250,
+        "start": "2025-08-15",
+        "end": "2025-08-31",
+        "amountRaised": 8000,
+        "targetAmount": 15000,
+        "media": "https://picsum.photos/seed/seva2/400/300"
+    },
+    {
+        "id": 3,
+        "code": "SEVA003",
+        "title": "Goshala Seva",
+        "tags": [
+            "Animals",
+            "Charity"
+        ],
+        "description": "Help in feeding and maintaining cows in the temple goshala.",
+        "marketPrice": 1000,
+        "discountedPrice": 900,
+        "start": "2025-08-10",
+        "end": "2025-09-10",
+        "amountRaised": 25000,
+        "targetAmount": 50000,
+        "media": "https://picsum.photos/seed/seva3/400/300"
+    },
+    {
+        "id": 4,
+        "code": "SEVA004",
+        "title": "Lighting the Temple",
+        "tags": [
+            "Lighting",
+            "Festival"
+        ],
+        "description": "Contribute to lighting arrangements during temple festivals.",
+        "marketPrice": 200,
+        "discountedPrice": 180,
+        "start": "2025-09-01",
+        "end": "2025-09-10",
+        "amountRaised": 5000,
+        "targetAmount": 12000,
+        "media": "https://picsum.photos/seed/seva4/400/300"
+    },
+    {
+        "id": 5,
+        "code": "SEVA005",
+        "title": "Special Pooja Sponsorship",
+        "tags": [
+            "Pooja",
+            "Religious"
+        ],
+        "description": "Sponsor special pooja ceremonies at the temple.",
+        "marketPrice": 1500,
+        "discountedPrice": 1400,
+        "start": "2025-09-05",
+        "end": "2025-09-15",
+        "amountRaised": 3000,
+        "targetAmount": 20000,
+        "media": "https://picsum.photos/seed/seva5/400/300"
+    },
+    {
+        "id": 6,
+        "code": "SEVA006",
+        "title": "Medical Camp for Devotees",
+        "tags": [
+            "Health",
+            "Charity"
+        ],
+        "description": "Provide free health checkups for devotees visiting the temple.",
+        "marketPrice": 800,
+        "discountedPrice": 750,
+        "start": "2025-08-22",
+        "end": "2025-08-29",
+        "amountRaised": 12000,
+        "targetAmount": 25000,
+        "media": "https://picsum.photos/seed/seva6/400/300"
+    },
+    {
+        "id": 7,
+        "code": "SEVA007",
+        "title": "Temple Cleaning Drive",
+        "tags": [
+            "Cleaning",
+            "Temple"
+        ],
+        "description": "Participate in the cleaning and maintenance of temple premises.",
+        "marketPrice": 100,
+        "discountedPrice": 80,
+        "start": "2025-08-18",
+        "end": "2025-08-19",
+        "amountRaised": 1000,
+        "targetAmount": 5000,
+        "media": "https://picsum.photos/seed/seva7/400/300"
+    },
+    {
+        "id": 8,
+        "code": "SEVA008",
+        "title": "Festive Prasad Distribution",
+        "tags": [
+            "Prasad",
+            "Festival"
+        ],
+        "description": "Distribute special prasad to devotees during festivals.",
+        "marketPrice": 600,
+        "discountedPrice": 550,
+        "start": "2025-08-25",
+        "end": "2025-09-01",
+        "amountRaised": 4500,
+        "targetAmount": 10000,
+        "media": "https://picsum.photos/seed/seva8/400/300"
+    },
+    {
+        "id": 9,
+        "code": "SEVA009",
+        "title": "Tree Plantation Drive",
+        "tags": [
+            "Environment",
+            "Charity"
+        ],
+        "description": "Plant and maintain trees around the temple premises.",
+        "marketPrice": 400,
+        "discountedPrice": 350,
+        "start": "2025-08-21",
+        "end": "2025-09-05",
+        "amountRaised": 2500,
+        "targetAmount": 8000,
+        "media": "https://picsum.photos/seed/seva9/400/300"
+    },
+    {
+        "id": 10,
+        "code": "SEVA010",
+        "title": "Vedic Chanting Sponsorship",
+        "tags": [
+            "Pooja",
+            "Spiritual"
+        ],
+        "description": "Sponsor Vedic chanting sessions for prosperity and peace.",
+        "marketPrice": 1200,
+        "discountedPrice": 1000,
+        "start": "2025-09-02",
+        "end": "2025-09-12",
+        "amountRaised": 6000,
+        "targetAmount": 15000,
+        "media": "https://picsum.photos/seed/seva10/400/300"
+    },
+    {
+        "id": 11,
+        "code": "SEVA011",
+        "title": "Scholarship for Temple Kids",
+        "tags": [
+            "Education",
+            "Charity"
+        ],
+        "description": "Support education of children in temple premises.",
+        "marketPrice": 2000,
+        "discountedPrice": 1800,
+        "start": "2025-08-15",
+        "end": "2025-09-15",
+        "amountRaised": 10000,
+        "targetAmount": 30000,
+        "media": "https://picsum.photos/seed/seva11/400/300"
+    },
+    {
+        "id": 12,
+        "code": "SEVA012",
+        "title": "Temple Music Program",
+        "tags": [
+            "Music",
+            "Festival"
+        ],
+        "description": "Organize devotional music programs in the temple.",
+        "marketPrice": 900,
+        "discountedPrice": 850,
+        "start": "2025-09-05",
+        "end": "2025-09-10",
+        "amountRaised": 4000,
+        "targetAmount": 12000,
+        "media": "https://picsum.photos/seed/seva12/400/300"
+    },
+    {
+        "id": 13,
+        "code": "SEVA013",
+        "title": "Free Books Distribution",
+        "tags": [
+            "Education",
+            "Charity"
+        ],
+        "description": "Distribute free religious and moral education books to children.",
+        "marketPrice": 300,
+        "discountedPrice": 280,
+        "start": "2025-08-22",
+        "end": "2025-09-05",
+        "amountRaised": 3500,
+        "targetAmount": 7000,
+        "media": "https://picsum.photos/seed/seva13/400/300"
+    },
+    {
+        "id": 14,
+        "code": "SEVA014",
+        "title": "Temple Roof Repair",
+        "tags": [
+            "Construction",
+            "Maintenance"
+        ],
+        "description": "Repair damaged temple roofs before the rainy season.",
+        "marketPrice": 5000,
+        "discountedPrice": 4800,
+        "start": "2025-08-18",
+        "end": "2025-09-15",
+        "amountRaised": 20000,
+        "targetAmount": 60000,
+        "media": "https://picsum.photos/seed/seva14/400/300"
+    },
+    {
+        "id": 15,
+        "code": "SEVA015",
+        "title": "Temple Garden Maintenance",
+        "tags": [
+            "Environment",
+            "Temple"
+        ],
+        "description": "Maintain and beautify temple gardens with seasonal plants.",
+        "marketPrice": 700,
+        "discountedPrice": 650,
+        "start": "2025-09-01",
+        "end": "2025-09-20",
+        "amountRaised": 4000,
+        "targetAmount": 10000,
+        "media": "https://picsum.photos/seed/seva15/400/300"
+    },
+    {
+        "id": 16,
+        "code": "SEVA016",
+        "title": "Cultural Program Sponsorship",
+        "tags": [
+            "Culture",
+            "Festival"
+        ],
+        "description": "Sponsor traditional dance and drama performances.",
+        "marketPrice": 1500,
+        "discountedPrice": 1400,
+        "start": "2025-08-25",
+        "end": "2025-09-05",
+        "amountRaised": 5000,
+        "targetAmount": 15000,
+        "media": "https://picsum.photos/seed/seva16/400/300"
+    },
+    {
+        "id": 17,
+        "code": "SEVA017",
+        "title": "Temple Announcements System Upgrade",
+        "tags": [
+            "Technology",
+            "Temple"
+        ],
+        "description": "Upgrade the sound system for better communication in the temple.",
+        "marketPrice": 2500,
+        "discountedPrice": 2400,
+        "start": "2025-09-02",
+        "end": "2025-09-15",
+        "amountRaised": 8000,
+        "targetAmount": 20000,
+        "media": "https://picsum.photos/seed/seva17/400/300"
+    },
+    {
+        "id": 18,
+        "code": "SEVA018",
+        "title": "Festival Lighting Expansion",
+        "tags": [
+            "Lighting",
+            "Festival"
+        ],
+        "description": "Add more decorative lights during festivals.",
+        "marketPrice": 1200,
+        "discountedPrice": 1150,
+        "start": "2025-09-05",
+        "end": "2025-09-12",
+        "amountRaised": 6000,
+        "targetAmount": 12000,
+        "media": "https://picsum.photos/seed/seva18/400/300"
+    },
+    {
+        "id": 19,
+        "code": "SEVA019",
+        "title": "Temple Water Facility",
+        "tags": [
+            "Infrastructure",
+            "Charity"
+        ],
+        "description": "Provide clean drinking water facilities to devotees.",
+        "marketPrice": 3500,
+        "discountedPrice": 3400,
+        "start": "2025-08-18",
+        "end": "2025-09-05",
+        "amountRaised": 9000,
+        "targetAmount": 20000,
+        "media": "https://picsum.photos/seed/seva19/400/300"
+    },
+    {
+        "id": 20,
+        "code": "SEVA020",
+        "title": "Free Medical Aid Distribution",
+        "tags": [
+            "Health",
+            "Charity"
+        ],
+        "description": "Provide free medicines to poor and needy people.",
+        "marketPrice": 1000,
+        "discountedPrice": 950,
+        "start": "2025-08-15",
+        "end": "2025-09-01",
+        "amountRaised": 7000,
+        "targetAmount": 15000,
+        "media": "https://picsum.photos/seed/seva20/400/300"
+    }
+]
