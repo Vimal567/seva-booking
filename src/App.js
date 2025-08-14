@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { loadSevas } from './store/sevaSlice';
 import { loadUser } from './store/userSlice';
 import { loadOrders } from './store/orderSlice';
+import Cart from "./pages/Cart/Cart";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,6 +23,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
     </Router>
   );
