@@ -10,18 +10,10 @@ body {
   font-family: Arial, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  font-weight: normal;
-}
-
 button {
   border: none;
   outline: none;
   background-color: inherit;
+  border-radius: 5px;
+  cursor: pointer;
 }
