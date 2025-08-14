@@ -5,23 +5,25 @@ import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [isSidebarVisible, setIsSidebarVisible] = useState(false);
+  const [latestOrders, setLatestOrders] = useState([]);
+
   const user = useSelector((state) => state.user.currentUser);
   const orders = useSelector((state) => state.orders.list);
-
-  const latestOrders = [...orders]
-    .sort((a, b) => new Date(b.orderDate) - new Date(a.orderDate))
-    .slice(0, 3);
 
   const toggleSidebar = () => {
     setIsSidebarVisible((prev) => !prev);
   };
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    const sortedOrders = [...orders]
+      .sort((a, b) => new Date(b.orderDate) - new Date(a.orderDate))
+      .slice(0, 3);
+
+    setLatestOrders(sortedOrders);
+  }, [orders]);
 
   return (
-    <div className="navbar-container">
-      <h1>Navbar</h1>
-
+    <section className="navbar-container">
       <ul className="menu">
         <li className="menu-item">
           <Link to="/">Home</Link>
@@ -36,22 +38,24 @@ const Navbar = () => {
 
       <div className={`sidebar ${isSidebarVisible ? "show" : ""}`}>
         <ul>
-          <li>{user.name}</li>
-          <li>{user.email}</li>
-          <li>{user.contact}</li>
+          <li>{user?.name}</li>
+          <li>{user?.email}</li>
+          <li>{user?.contact}</li>
         </ul>
-        {latestOrders.length ? <Fragment>
+
+        {latestOrders.length > 0 && (
+          <Fragment>
             <hr />
             <ul>
               <li>Latest 3 orders</li>
-              {latestOrders.slice(0, 3).map((order, index) => (
+              {latestOrders.map((order, index) => (
                 <li key={index}>Order #{order.orderId}</li>
               ))}
             </ul>
-          </Fragment> : null
-        }
+          </Fragment>
+        )}
       </div>
-    </div>
+    </section>
   );
 };
 

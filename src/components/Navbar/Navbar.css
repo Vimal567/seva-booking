@@ -1,4 +1,5 @@
 .navbar-container {
+  width: 100%;
   position: sticky;
   top: 0;
   left: 0;
@@ -6,15 +7,8 @@
   padding: 0.5rem 0rem;
   background-color: rgb(226, 224, 224);
   display: flex;
-  justify-content: space-between;
   align-items: center;
   z-index: 1;
-}
-
-h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin-left: 1rem;
-  cursor: default;
 }
 
 .navbar-container ul,
@@ -23,8 +17,10 @@ li {
 }
 
 .navbar-container .menu {
+  width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .menu .menu-item {
@@ -48,11 +44,13 @@ li {
 }
 
 .navbar-container .sidebar {
+  display: none;
   position: absolute;
   top: 100%;
   left: 100%;
   background-color: white;
-  padding-right: 10px;
+  padding: 10px;
+  line-height: 1.5rem;
   border-width: 0px 0px 1px 1px;
   border-color: #000000;
   border-style: solid;
@@ -63,7 +61,7 @@ li {
 }
 
 .sidebar.show {
-  opacity: 1;
+  display: block;
   transform: translate(-100%, 0);
   pointer-events: auto;
   cursor: default;
