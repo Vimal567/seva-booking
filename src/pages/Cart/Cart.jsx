@@ -185,7 +185,6 @@ const Cart = () => {
             </label>
 
             <button
-              role="button"
               className="submit-buttons"
               onClick={handlePincodeLookup}
             >
