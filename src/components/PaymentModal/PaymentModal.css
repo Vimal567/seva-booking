@@ -1,0 +1,110 @@
+.backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    display: grid;
+    place-items: center;
+    z-index: 1000;
+}
+
+.backdrop .modal {
+    width: min(560px, 92vw);
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.backdrop .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.backdrop .closeBtn {
+    border: 0;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.backdrop .tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.backdrop .tab {
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1px solid #e5e7eb;
+    background: #f9fafb;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.backdrop .active {
+    background: #111827;
+    color: white;
+    border-color: #111827;
+}
+
+.backdrop .body {
+    padding: 16px;
+    display: grid;
+    gap: 14px;
+}
+
+.backdrop .label {
+    display: grid;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.backdrop .input {
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 16px;
+}
+
+.backdrop .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.backdrop .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px 18px;
+    border-top: 1px solid #f1f1f1;
+}
+
+.backdrop .amount {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.backdrop .payBtn {
+    border: 0;
+    border-radius: 12px;
+    padding: 10px 18px;
+    background: #0f766e;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.backdrop .payBtnDisabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}

@@ -1,23 +1,25 @@
-import React, { Fragment, useState } from "react";
+import { useState } from "react";
 import "./Cart.css";
 import { useSelector, useDispatch } from "react-redux";
 import {
+  clearCart,
   decreaseQuantity,
   increaseQuantity,
   removeFromCart,
 } from "../../store/cartSlice";
+import PaymentModal from "../../components/PaymentModal/PaymentModal";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   // User form state
   const [mobile, setMobile] = useState("");
   const [otpSent, setOtpSent] = useState(false);
   const [otp, setOtp] = useState("");
   const [userVerified, setUserVerified] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
 
   // Address form state
   const [pincode, setPincode] = useState("");
@@ -27,6 +29,8 @@ const Cart = () => {
   const [addr2, setAddr2] = useState("");
   const [addrType, setAddrType] = useState("");
   const [addressVerified, setAddressVerified] = useState(false);
+
+  const [showPayment, setShowPayment] = useState(false); // <-- ADD
 
   const totalAmount = cartItems.reduce(
     (sum, item) => sum + item.discountedPrice * item.quantity,
@@ -64,6 +68,12 @@ const Cart = () => {
 
   const canPay = userVerified && addressVerified;
 
+  const handlePaymentSuccess = () => {
+    alert("Payment Successful!");
+    dispatch(clearCart());
+    navigate("/");
+  };
+
   return (
     <section className="cart-section">
       <h1>Checkout Page</h1>
@@ -75,7 +85,6 @@ const Cart = () => {
             {cartItems.map((seva) => (
               <div key={seva.id} className="seva-item">
                 <img src={seva.media} alt={seva.title} />
-
                 <div className="seva-details">
                   <strong>{seva.title}</strong>
                   <span>₹{seva.discountedPrice * seva.quantity}</span>
@@ -111,8 +120,9 @@ const Cart = () => {
             {!userVerified ? (
               <form>
                 <h2 className="heading">User Details</h2>
-                <div className="form-group">
-                  <label htmlFor="mobile">Number</label>
+
+                <label className="label">
+                  Number
                   <input
                     type="text"
                     placeholder="Mobile Number"
@@ -120,7 +130,8 @@ const Cart = () => {
                     id="mobile"
                     onChange={(e) => setMobile(e.target.value)}
                   />
-                </div>
+                </label>
+
                 {!otpSent && (
                   <button
                     type="button"
@@ -133,15 +144,17 @@ const Cart = () => {
                 <br />
                 <br />
                 {otpSent && (
-                  <div className="form-group">
-                    <label htmlFor="optVerify">OTP</label>
-                    <input
-                      type="text"
-                      placeholder="Enter OTP"
-                      value={otp}
-                      id="optVerify"
-                      onChange={(e) => setOtp(e.target.value)}
-                    />
+                  <>
+                    <label className="label">
+                      OTP
+                      <input
+                        type="text"
+                        placeholder="Enter OTP"
+                        value={otp}
+                        id="otpVerify"
+                        onChange={(e) => setOtp(e.target.value)}
+                      />
+                    </label>
                     <br />
                     <button
                       type="button"
@@ -150,17 +163,18 @@ const Cart = () => {
                     >
                       Verify OTP
                     </button>
-                  </div>
+                  </>
                 )}
               </form>
             ) : (
-              <p>User verified: {name || "Existing User"}</p>
+              <p>User verified, existing user</p>
             )}
 
-            {/* ADDRESS */}
+            {/* ADDRESS SECTION */}
             <h2 className="heading">Address</h2>
-            <div className="form-group">
-              <label htmlFor="pincode">Pincode</label>
+
+            <label className="label">
+              Pincode
               <input
                 type="text"
                 placeholder="Pincode"
@@ -168,7 +182,8 @@ const Cart = () => {
                 id="pincode"
                 onChange={(e) => setPincode(e.target.value)}
               />
-            </div>
+            </label>
+
             <button
               role="button"
               className="submit-buttons"
@@ -178,10 +193,11 @@ const Cart = () => {
             </button>
             <br />
             <br />
+
             {city && stateName && (
               <>
-                <div className="form-group">
-                  <label htmlFor="city">City</label>
+                <label className="label">
+                  City
                   <input
                     type="text"
                     placeholder="City"
@@ -189,10 +205,10 @@ const Cart = () => {
                     id="city"
                     readOnly
                   />
-                </div>
+                </label>
 
-                <div className="form-group">
-                  <label htmlFor="stateName">State</label>
+                <label className="label">
+                  State
                   <input
                     type="text"
                     placeholder="State"
@@ -200,10 +216,10 @@ const Cart = () => {
                     id="stateName"
                     readOnly
                   />
-                </div>
+                </label>
 
-                <div className="form-group">
-                  <label htmlFor="addrType">Address Type</label>
+                <label className="label">
+                  Address Type
                   <select
                     value={addrType}
                     id="addrType"
@@ -214,10 +230,10 @@ const Cart = () => {
                     <option value="Work">Work</option>
                     <option value="Other">Other</option>
                   </select>
-                </div>
+                </label>
 
-                <div className="form-group">
-                  <label htmlFor="addr1">Address Line 1</label>
+                <label className="label">
+                  Address Line 1
                   <input
                     type="text"
                     placeholder="Address Line 1"
@@ -225,10 +241,10 @@ const Cart = () => {
                     id="addr1"
                     onChange={(e) => setAddr1(e.target.value)}
                   />
-                </div>
+                </label>
 
-                <div className="form-group">
-                  <label htmlFor="addr2">Address Line 2</label>
+                <label className="label">
+                  Address Line 2
                   <input
                     type="text"
                     placeholder="Address Line 2"
@@ -236,7 +252,7 @@ const Cart = () => {
                     id="addr2"
                     onChange={(e) => setAddr2(e.target.value)}
                   />
-                </div>
+                </label>
               </>
             )}
 
@@ -245,15 +261,24 @@ const Cart = () => {
               className={`${canPay ? "pay-now" : "cannot-pay"} `}
               type="button"
               disabled={!canPay}
-              onClick={() => alert("Proceeding to Payment")}
+              onClick={() => setShowPayment(true)}
             >
               Pay Now
             </button>
           </div>
         </div>
       ) : (
+        // In case of empty cart
         <div className="no-items">No items in the cart</div>
       )}
+
+      {/* PAYMENT MODAL */}
+      <PaymentModal
+        open={showPayment}
+        amount={totalAmount}
+        onClose={() => setShowPayment(false)}
+        onSuccess={handlePaymentSuccess}
+      />
     </section>
   );
 };

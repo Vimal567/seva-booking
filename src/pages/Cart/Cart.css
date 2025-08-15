@@ -4,7 +4,7 @@
     align-items: center;
     padding: 1rem;
     gap: 1rem;
-    margin-top: 2rem;
+    margin: 2rem 0rem;
 }
 
 .cart-section h1 {
@@ -89,14 +89,7 @@ span {
     margin-bottom: 1rem;
 }
 
-.container .form-group {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 0.5rem;
-}
-
-.form-group label {
+.container .label, input {
     margin-bottom: 5px;
 }
 
