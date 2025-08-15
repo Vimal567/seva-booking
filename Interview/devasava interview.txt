@@ -1,0 +1,41 @@
+export enum Student {
+	name: string;
+	age: number;
+}
+
+export enum ClassTen extends Student {
+	section?: string;
+	subjects?: string;
+}
+
+
+
+-const a;
+a = 10;
+
+
+const user {
+name: vimal,
+age: 26
+};
+
+const { name, age } = user;
+
+let { name, age, id } = user;
+
+if(!id) {
+	id = -1;
+}
+
+
+useCallback(() => function student() {}, []);
+
+
+Student({name, age, showAttendance = false}) => {
+
+
+
+};
+
+
+<Student name age showAttendance />
